@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Projeto lista 1</title>
+        <link rel="stylesheet" href="/public/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Heebo:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="tarefas">
+            <form method="post">
+                <h1 class="title">LISTA DE TAREFAS</h1>
+                <input class="input" type="text" name="tarefa">
+                <!--<input class="button-86" type="submit" name="acao" value="Add Tarefa">-->
+                <button class="button1" type="submit" name="acao" value="Add Tarefa">Add Tarefa</button>
+            </form>
+            
+            <% for(let i = 0; i < tarefasList.length; i++){ %>
+
+                <!--<p><%= tarefasList[i] %> | <a href="/deletar/<%= i %>">X</a></p>-->
+                
+                <p><%= tarefasList[i] %> | <button class="button-85" onclick="window.location.href='/deletar/<%= i %>'">Apagar</button></p>
+                
+            
+            <% } %>
+        
+        </div>
+    </body>
+</html>
